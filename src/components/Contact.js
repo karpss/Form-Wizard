@@ -4,9 +4,26 @@ import React from 'react';
 
 const Contact = () => {
   return (
-  <div>
-      Contact
-  </div>
+    <form>
+    <label htmlFor='phone'>Phone:</label>
+      <input
+      type="number"
+      name="phone"
+      value=""
+      onChange=""
+      />
+      <label htmlFor='email'>Email:</label>
+      <input
+      type="text"
+      name="email"
+      value=""
+      onChange=""
+      />
+
+
+    
+    
+    </form>
   )
 };
 

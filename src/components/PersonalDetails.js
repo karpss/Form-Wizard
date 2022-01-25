@@ -4,10 +4,30 @@ import React from 'react';
 const PersonalDetails = () => {
   return (
   
-  <div>
-  Personal Details
+  <form>
+    
+    <label htmlFor='first-name'>First Name:</label>
+    <input
+    type="text"
+    name="first-name"
+    value=""
+    onChange=""
+    
+    />
 
-  </div>
+<label htmlFor='last-name'>Last Name:</label>
+    <input
+    type="text"
+    name="last-name"
+    value=""
+    onChange=""
+    
+    />
+
+    <button onClick="">Next</button>
+
+
+  </form>
   )
 };
 
