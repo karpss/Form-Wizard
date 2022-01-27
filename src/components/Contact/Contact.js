@@ -20,6 +20,8 @@ const Contact = () => {
       onChange=""
       />
 
+<button onClick="">Back</button> <button onClick="">Next</button>
+
 
     
     

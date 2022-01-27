@@ -9,7 +9,7 @@ const PersonalDetails = () => {
     <label htmlFor='first-name'>First Name:</label>
     <input
     type="text"
-    name="first-name"
+    name="firstname"
     value=""
     onChange=""
     
@@ -18,7 +18,7 @@ const PersonalDetails = () => {
 <label htmlFor='last-name'>Last Name:</label>
     <input
     type="text"
-    name="last-name"
+    name="lastname"
     value=""
     onChange=""
     
