@@ -2,25 +2,25 @@
 
 import React from 'react';
 
-const Contact = () => {
+const Contact = ({data, handleChange, next, back}) => {
   return (
     <form>
     <label htmlFor='phone'>Phone:</label>
       <input
       type="number"
       name="phone"
-      value=""
-      onChange=""
+      value={data.phone}
+      onChange={handleChange}
       />
       <label htmlFor='email'>Email:</label>
       <input
       type="text"
       name="email"
-      value=""
-      onChange=""
+      value={data.email}
+      onChange={handleChange}
       />
 
-<button onClick="">Back</button> <button onClick="">Next</button>
+<button onClick={back}>Back</button> <button onClick={next}>Next</button>
 
 
     

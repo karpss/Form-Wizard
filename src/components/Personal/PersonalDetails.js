@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 
-const PersonalDetails = () => {
+const PersonalDetails = ({data, handleChange, next}) => {
   return (
   
   <form>
@@ -10,8 +10,8 @@ const PersonalDetails = () => {
     <input
     type="text"
     name="firstname"
-    value=""
-    onChange=""
+    value={data.firstname}
+    onChange={handleChange}
     
     />
 
@@ -19,12 +19,12 @@ const PersonalDetails = () => {
     <input
     type="text"
     name="lastname"
-    value=""
-    onChange=""
+    value={data.lastname}
+    onChange={handleChange}
     
     />
 
-    <button onClick="">Next</button>
+    <button onClick={next}>Next</button>
 
 
   </form>
