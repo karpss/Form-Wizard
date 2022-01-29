@@ -14,8 +14,6 @@ A simple form wizard built with react without any external library
 - Build a custom useValidation hook to validate form entries
 - Make form responsive
 - Send form details through an API
-- 
-- 
 
 # How to run this project
 - git clone the project, then ```npm install and npm start ```
