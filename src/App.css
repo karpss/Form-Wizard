@@ -1,0 +1,29 @@
+body {
+    padding: 10%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  label {
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  input{
+    width: 300px;
+    height: 30px;
+  }
+
+  button{
+    padding: 10px 16px;
+    margin: 10px 0;
+  
+    color: #ffffff;
+    background: navy;
+    border: 2px solid navy;
+    border-radius: 5px;
+  
+    cursor: pointer;
+    outline: none;
+  }
