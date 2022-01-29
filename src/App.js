@@ -26,6 +26,8 @@ const handleChange = (e) => {
   });
 };
 
+
+
 const next = () => {
   setCurrentStage(currentStage + 1);
 };
@@ -38,6 +40,7 @@ switch (currentStage){
 case 1:
 
 return (
+  
     <PersonalDetails
 data={form}
 handleChange={handleChange}
@@ -68,10 +71,12 @@ case 2:
 
     default:
       return(
-      <SubmitForm data={form} back={back}/>
+      <SubmitForm  data={form} back={back}/>
       )
+      
   
 }
+
 }
 
 export default App;
