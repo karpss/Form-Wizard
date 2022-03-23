@@ -1,12 +1,35 @@
 /* eslint-disable */
 import {useState} from 'react';
-import PersonalDetails from './components/Personal/PersonalDetails';
-import Address from './components/Address/Address';
-import Contact from './components/Contact/Contact';
 import FormContainer from './components/FormContainer/FormContainer';
 import './App.css';
 
+import {multiStepContext} from './StepContext'
+
 function App() {
+  const [currentStep, setCurrentStep] = useState(1);
+  const [userData, setUserData] = useState([]);
+  const [finalData, setFinalData] = useState([]);
+
+
+
+  return (
+    <div>
+      <multiStepContext.Provider
+      value={{
+        currentStep,
+        setCurrentStep,
+        userData,
+        setUserData,
+        finalData,
+        setFinalData,
+
+      }}
+      >
+        <FormContainer/>
+
+      </multiStepContext.Provider>
+    </div>
+  )
   
 }
 
