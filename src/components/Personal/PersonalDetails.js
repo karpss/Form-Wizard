@@ -1,23 +1,30 @@
-const PersonalDetails = ({data, handleChange, next}) => {
+/* eslint-disable */
+import { useContext } from 'react';
+import { multiStepContext } from '../../StepContext';
+
+
+const PersonalDetails = () => {
+  const {setCurrentStep, userData, setUserData} = useContext(multiStepContext);
   return (
     <form>
       <label htmlFor="first-name">First Name:</label>
       <input
         type="text"
         name="firstname"
-        value={data.firstname}
-        onChange={handleChange}
+        value={userData.firstname}
+        onChange={(e) =>
+          setUserData({...userData, firstname: e.target.value})}
       />
 
       <label htmlFor="last-name">Last Name:</label>
       <input
         type="text"
         name="lastname"
-        value={data.lastname}
-        onChange={handleChange}
+        value={userData.lastname}
+        onChange={(e) => setUserData({...userData, lastname: e.target.value})}
       />
 
-      <button type="button" onClick={next}>
+      <button type="button" onClick={() => setCurrentStep(2)} >
         Next
       </button>
     </form>

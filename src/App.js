@@ -1,65 +1,36 @@
+/* eslint-disable */
 import {useState} from 'react';
-import PersonalDetails from './components/Personal/PersonalDetails';
-import Address from './components/Address/Address';
-import Contact from './components/Contact/Contact';
-import SubmitForm from './components/Submission/SubmitForm';
+import FormContainer from './components/FormContainer/FormContainer';
 import './App.css';
 
+import {multiStepContext} from './StepContext'
+
 function App() {
-  const [currentStage, setCurrentStage] = useState(1);
-  const [form, setForm] = useState({
-    firstname: '',
-    lastname: '',
-    street: '',
-    city: '',
-    state: '',
-    phone: '',
-    email: '',
-  });
+  const [currentStep, setCurrentStep] = useState(1);
+  const [userData, setUserData] = useState([]);
+  const [finalData, setFinalData] = useState([]);
 
-  const handleChange = (e) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value,
-    });
-  };
 
-  const next = () => {
-    setCurrentStage(currentStage + 1);
-  };
 
-  const back = () => {
-    setCurrentStage(currentStage - 1);
-  };
+  return (
+    <div>
+      <multiStepContext.Provider
+      value={{
+        currentStep,
+        setCurrentStep,
+        userData,
+        setUserData,
+        finalData,
+        setFinalData,
 
-  switch (currentStage) {
-    case 1:
-      return (
-        <PersonalDetails data={form} handleChange={handleChange} next={next} />
-      );
+      }}
+      >
+        <FormContainer/>
 
-    case 2:
-      return (
-        <Address
-          data={form}
-          handleChange={handleChange}
-          next={next}
-          back={back}
-        />
-      );
-    case 3:
-      return (
-        <Contact
-          data={form}
-          handleChange={handleChange}
-          next={next}
-          back={back}
-        />
-      );
-
-    default:
-      return <SubmitForm data={form} back={back} />;
-  }
+      </multiStepContext.Provider>
+    </div>
+  )
+  
 }
 
 export default App;
