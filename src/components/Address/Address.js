@@ -1,4 +1,5 @@
-const Address = ({data, handleChange, next, back}) => {
+/* eslint-disable */
+const Address = () => {
   return (
     <form>
       <label htmlFor="street">Street:</label>

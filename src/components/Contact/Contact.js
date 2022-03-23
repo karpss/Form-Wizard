@@ -1,4 +1,5 @@
-const Contact = ({data, handleChange, next, back}) => {
+/* eslint-disable */
+const Contact = () => {
   return (
     <form>
       <label htmlFor="phone">Phone:</label>

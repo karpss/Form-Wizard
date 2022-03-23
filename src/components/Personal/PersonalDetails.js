@@ -1,4 +1,5 @@
-const PersonalDetails = ({data, handleChange, next}) => {
+/* eslint-disable */
+const PersonalDetails = () => {
   return (
     <form>
       <label htmlFor="first-name">First Name:</label>
