@@ -10,6 +10,11 @@ function App() {
   const [userData, setUserData] = useState([]);
   const [finalData, setFinalData] = useState([]);
 
+  function submitData() {
+    setFinalData( () => [...finalData, userData]);
+    setUserData('');
+    setCurrentStep(1);
+  }
 
 
   return (
@@ -22,6 +27,7 @@ function App() {
         setUserData,
         finalData,
         setFinalData,
+        submitData,
 
       }}
       >

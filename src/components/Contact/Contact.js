@@ -4,9 +4,9 @@ import { multiStepContext } from '../../StepContext';
 
 
 const Contact = () => {
-  const {setCurrentStep, userData, setUserData} = useContext(multiStepContext);
+  const {setCurrentStep, userData, setUserData, submitData} = useContext(multiStepContext);
   return (
-    <form>
+    <div>
       <label htmlFor="phone">Phone:</label>
       <input
         type="number"
@@ -24,10 +24,10 @@ const Contact = () => {
       <button type="button" onClick={() => setCurrentStep(2)}>
         Back
       </button>{' '}
-      <button type="button" >
+      <button type="button" onClick={submitData}>
        Submit
       </button>
-    </form>
+    </div>
   );
 };
 

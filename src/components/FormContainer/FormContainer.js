@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import PersonalDetails from '../Personal/PersonalDetails';
 import Address from '../Address/Address';
 import Contact from '../Contact/Contact';
+import DataDisplay from '../Display/DataDisplay'
 import { multiStepContext } from '../../StepContext';
 
 const FormContainer = () => {
@@ -19,12 +20,14 @@ const FormContainer = () => {
         }
         return step;
     }
+   console.log(finalData);
 
     return (
         <div>
 
 {showCurrentStep(currentStep)}
-{finalData}
+{<DataDisplay /> }
+
 
 
 

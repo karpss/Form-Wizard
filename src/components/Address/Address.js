@@ -6,7 +6,7 @@ import { multiStepContext } from '../../StepContext';
 const Address = () => {
   const {setCurrentStep, userData, setUserData} = useContext(multiStepContext);
   return (
-    <form>
+    <div>
       <label htmlFor="street">Street:</label>
       <input
         type="text"
@@ -34,7 +34,7 @@ const Address = () => {
       <button type="button" onClick={() => setCurrentStep(3)}>
         Next
       </button>
-    </form>
+    </div>
   );
 };
 

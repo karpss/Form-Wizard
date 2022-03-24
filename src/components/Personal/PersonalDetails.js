@@ -6,7 +6,7 @@ import { multiStepContext } from '../../StepContext';
 const PersonalDetails = () => {
   const {setCurrentStep, userData, setUserData} = useContext(multiStepContext);
   return (
-    <form>
+    <div>
       <label htmlFor="first-name">First Name:</label>
       <input
         type="text"
@@ -27,7 +27,7 @@ const PersonalDetails = () => {
       <button type="button" onClick={() => setCurrentStep(2)} >
         Next
       </button>
-    </form>
+    </div>
   );
 };
 
