@@ -20,7 +20,7 @@ const FormContainer = () => {
         }
         return step;
     }
-   console.log(finalData);
+   
 
     return (
         <div>

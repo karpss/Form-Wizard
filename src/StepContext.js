@@ -1,4 +1,4 @@
 /* eslint-disable */
 import { createContext } from 'react';
 
-export const multiStepContext = createContext();
+export const multiStepContext = createContext(null);

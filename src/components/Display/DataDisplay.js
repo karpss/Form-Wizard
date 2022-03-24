@@ -13,11 +13,17 @@ const DataDisplay = () => {
 {finalData.map((data) => (
               <div key={data.phone}>
                 {data.firstname}
+                <br/>
                 {data.lastname}
+                <br/>
                 {data.street}
+                <br/>
                 {data.city}
+                <br/>
                 {data.state}
+                <br/>
                 {data.phone}
+                <br/>
                 {data.email}
                 
               </div>
